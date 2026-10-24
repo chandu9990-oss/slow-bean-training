@@ -1,0 +1,244 @@
+/* The Slow Bean Chocolate - Website Styles */
+:root {
+  --dark: #2C2C2C;
+  --green: #4CAF50;
+  --green-dark: #388E3C;
+  --gray: #555555;
+  --light-gray: #F8F8F8;
+  --border: #E0E0E0;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--dark);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 12px;
+}
+
+nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--green);
+}
+
+/* Hero */
+.hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(to bottom, #fafafa, #fff);
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.hero .accent {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+/* Sections */
+section {
+  padding: 70px 0;
+}
+
+section h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+section h3 {
+  font-size: 22px;
+  margin: 28px 0 12px;
+  color: var(--dark);
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.price {
+  font-size: 28px;
+  color: var(--green);
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--green);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  margin: 16px 0 24px 0;
+}
+
+ul li {
+  padding: 6px 0 6px 20px;
+  position: relative;
+}
+
+ul li:before {
+  content: "•";
+  color: var(--green);
+  position: absolute;
+  left: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: #ccc;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+/* Page specific */
+.page-header {
+  padding: 60px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  nav { display: none; }
+  .two-col { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+}
